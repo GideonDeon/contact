@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <main>
+      <content>
+        <div class="camera"></div>
+        <div class="head">
+          <form action="{% url 'search' %}" method="POST"> 
+            {% csrf_token %}
+            <input type="text" placeholder="search" class="search" name="search">
+            <button class="sear"><img  src="/static/images/search.png" alt=""></button>
+            <br>
+            <br>
+            <a href="{% url 'create_contact' %}"><p>Create new contact</p></a>
+          </form>        
+        </div>
+        <div class="add">
+          <a href="{% url 'create_contact' %}">
+            <div class="cro"></div>
+            <div class="ss"></div>
+          </a>
+        </div>
+        {% for phone in phones%}
+            <div class="con">
+              <p class="cn">{{phone}} </p>
+              <p class="cn">PhoneNo: {{phone.PhoneNo}}</p>
+              <p class="cn">Email: {{phone.Email}}</p>
+              <p class="cn">Home: {{phone.Address}}</p>
+            </div>  
+            <hr>
+           <p class="call">Dial</p>
+           <p><a href="{% url 'edit' phone.id %}" class="edit">Edit</a></p>
+        {%endfor%}
+        <div class="app">
+          <div></div>
+          <div></div>
+          <a href="{% url 'back' %}"><div></div></a>
+        </div>
+      </content>
+    </main>
+</body>
+</html>

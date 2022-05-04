@@ -1,0 +1,375 @@
+main{
+    height: 700px;
+    width: 500px;
+    background-color: black;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 20px;
+
+}
+content{
+    height: 680px;
+    width: 475px;
+    position: absolute;
+    top: 10px;
+    left: 48%;
+    transform: translate(-48%);
+    background-color: white;
+    border-radius: 10px;
+}
+.back{
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.camera{
+    background-color: whitesmoke;
+    height: 10px;
+    width: 10px;
+    border-radius: 10px;
+    border: solid 7px black;
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: transparent;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    cursor: pointer;
+}
+.menu>div{
+    background-color: gold;
+    height: 10px;
+    width: 10px;
+    position: relative;
+    left: 3px;
+    cursor: pointer;
+}
+.phone{
+    height: 50px;
+    width: 50px;
+    background-color: green;
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+    border-radius: 10px;
+    z-index: 1;
+    cursor: pointer;
+   
+}
+.cameraapp{
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    position: absolute;
+    bottom: 10px;
+    left: 120px;
+    border-radius: 10px;
+    z-index: 1;
+    cursor: pointer;
+   
+}
+.instagram{
+    height: 50px;
+    width: 50px;
+    background-color: plum;
+    position: absolute;
+    bottom: 10px;
+    right: 120px;
+    border-radius: 10px;
+    z-index: 1;
+    cursor: pointer;
+   
+}
+.whatsapp{
+    height: 50px;
+    width: 50px;
+    background-color: lightgreen;
+    position: absolute;
+    bottom: 10px;
+    right: 30px;
+    border-radius:10px; 
+    z-index: 1;
+    cursor: pointer;
+   
+}
+.head{
+    background: linear-gradient(to bottom, black, gold);
+    height: 130px;
+    width: 475px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.head1{
+    background: linear-gradient(to bottom, black, gold);
+    height: 200px;
+    width: 475px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative;
+    top: -1px;
+    z-index: -1;
+    padding-top: 10px;
+}
+.head1>p{
+    color: white;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: bolder;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+.search{
+    position: relative;
+    left: 20px;
+    top: 30px;
+    height: 30px;
+    width: 300px;
+    border-radius: 20px;
+    font-size: 20px;
+    text-indent: 10px;
+}
+.search+button>img{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    right: 90px;
+    top: 30px;
+
+}
+.search~a>p{
+    color: white;
+    text-indent: 30px;
+    font-size: 20px;
+    margin-top: 40px;
+    text-transform: capitalize;
+    
+}
+.search~a{
+    text-decoration: none;
+}
+.add{
+    background-color: gold;
+    height: 50px;
+    width: 50px;
+    border-radius: 40px;
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.cro{
+    width: 3px;
+    height: 27px;
+    background-color: white;
+    position: relative;
+    top: 12px;
+    left: 24px;
+    
+}
+.cro+div{
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    position: relative;
+    top: -4px;
+    left: 10px;
+}
+aside{
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    color: white;
+    
+    
+}
+.save{
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+input{
+    width: 400px;
+    height: 50px;
+    border-radius: 20px;
+    text-indent: 20px;
+    border: 0;
+    border-bottom: solid 6px gold;
+}
+.call{
+    height: 30px;
+    width: 50px;
+    background-color: gold;
+    color: white;
+    position: relative;
+    top: -140px;
+    left: 350px;
+    border-radius: 10px;
+    padding-top: 8px;
+    text-align: center;
+    font-weight: 900;
+    border: solid 1px  black;
+  
+
+}
+.call+p{
+    position: relative;
+    top: -195px;
+    left: 410px;
+    height: 30px;
+    width: 50px;
+    background-color: gold;
+    border-radius: 10px;
+    padding-top: 8px;
+    text-align: center;
+    font-weight: 900; 
+    border: solid 1px  black;
+}
+.call+p>a{
+    color: white;
+    text-decoration: none;
+}
+.con>p{
+    font-size: 15px;
+    text-transform: capitalize;
+
+}
+.con>p:nth-child(2){
+   
+    text-indent: 20px;
+
+}
+.con>p:nth-child(3){
+   
+    text-indent: 20px;
+
+}
+.con>p:nth-child(4){
+  
+    text-indent: 20px;
+
+}
+.delete{
+    position: relative;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    height: 30px;
+    width: 50px;
+    background-color: gold;
+    padding-top: 8px;
+    text-align: center;
+    font-weight: 900; 
+    border-radius: 10px;
+    border: solid 1px  black;
+}
+.delete>a{
+    color: black;
+    text-decoration: none;
+    text-transform: capitalize;
+    
+}
+h3{
+    text-align: center;
+}
+.app{
+    background-color: transparent;
+    height: 30px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}    
+.app>div:first-child{
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    border: solid 1px black;
+    cursor: pointer;
+}
+.app>div:nth-child(2){
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    border: solid 1px black;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.app>a>div{
+    height:0;
+    width:0;
+    background-color: transparent;
+    border: 0;
+    border-bottom: solid 10px transparent;
+    border-left: solid 10px transparent;
+    border-right: solid 10px black;
+    border-top: solid 10px transparent;
+}
+.time{
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#session{
+    font-size: 10px;
+    color: white;
+    text-indent: 15px;
+   
+}
+#clock{
+    font-size: 50px;
+    color: white;
+}
+.text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 215, 0, 0.5);
+    height: 100px;
+    width: 200px;
+    text-align: center;
+    font-size: 20px;
+    border: solid 5px black;
+    display: none;
+}
+.hand{
+    position: absolute;
+    left: -300px;
+    bottom: -150px;
+    animation: hand;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    z-index: 0;
+}
+@keyframes hand{
+    from{
+        left: -300px;
+
+    }
+    to{
+        left: -280px;
+    }
+}

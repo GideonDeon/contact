@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <main>
+      <content>
+        <div class="camera"></div>
+        <div class="head1">
+            <p>Edit {{value.FullName}}</p>  
+            <a href="{% url 'contact' %}"><aside>Back</aside></a>
+         </div>
+         <form action="{% url 'edit_contact' value.id %}" method="POST" class="createform">
+            {% csrf_token %}
+             <label>
+                Name:
+                <input type="text" name="name" placeholder="Fullname" value="{{value.FullName}}"><br>
+            </label>
+            <br>
+            <br>
+            <label>
+                Email:
+                <input type="email" name="email" placeholder="Email" value="{{value.Email}}"><br>
+            </label>
+            <br>
+            <br>
+            <label>
+                Phone:
+                <input type="tel" name="tel" placeholder="PhoneNo." value="{{value.PhoneNo}}"><br>
+            </label> 
+            <br>
+            <br>
+            <label> 
+                Home:
+                <input type="text" name="home" placeholder="Home Address" value="{{value.Address}}"><br>
+            </label>   
+            <button class="save">Save</button>   
+            <p class="delete"><a href="{% url 'delete' value.id %}">delete</a></p>
+         </form>
+         <div class="app">
+            <div></div>
+            <div></div>
+            <a href="{% url 'back' %}"><div></div></a>
+          </div>
+      </content>
+    </main>
+</body>
+</html>

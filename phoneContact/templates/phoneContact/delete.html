@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <main>
+      <content>
+        <div class="camera"></div>
+        <div class="head1">
+            <p>delete {{value.FullName}}</p>  
+            <a href="{% url 'contact' %}"><aside>Back</aside></a>
+         </div>
+         
+        <h3>Are you sure you want to delete "{{value.FullName}}"?</h3>
+        <p class="delete"><a href="{% url 'delete_contact' value.id %}">delete</a></p>
+        <div class="app">
+          <div></div>
+          <div></div>
+          <a href="{% url 'back' %}"><div></div></a>
+        </div>
+      </content>
+    </main>
+</body>
+</html>
