@@ -66,7 +66,7 @@ function clk(){
 }
 
 function insta(){
-    text.innerHTML = "come on! you can see the little hand right??"
+    text.innerHTML = "come on! you can see that big a** arrow right??"
     text.style.display = "block"
 }
 function whats(){
@@ -74,6 +74,6 @@ function whats(){
     text.style.display = "block"
 }
 function menU(){
-    text.innerHTML = "Please, click on the indicated icon and also try out the delete button"
+    text.innerHTML = "Please, click on the indicated icon and also try out the edit button"
     text.style.display = "block"
 }

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>contact</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="shortcut icon" href="/static/images/icon.png" type="image/x-icon">
 </head>
 <body>
     <main>
@@ -28,17 +29,21 @@
             <div class="ss"></div>
           </a>
         </div>
-        {% for phone in phones%}
-            <div class="con">
-              <p class="cn">{{phone}} </p>
-              <p class="cn">PhoneNo: {{phone.PhoneNo}}</p>
-              <p class="cn">Email: {{phone.Email}}</p>
-              <p class="cn">Home: {{phone.Address}}</p>
-            </div>  
-            <hr>
-           <p class="call">Dial</p>
-           <p><a href="{% url 'edit' phone.id %}" class="edit">Edit</a></p>
-        {%endfor%}
+        <div class="screen">
+            {% for phone in phones%}
+             <div>
+                  <p class="cn">{{phone}} </p>
+                  <p class="cn">PhoneNo: {{phone.PhoneNo}}</p>
+                  <p class="cn">Email: {{phone.Email}}</p>
+                  <p class="cn">Home: {{phone.Address}}</p> 
+                  <hr>
+              </div>  
+              <div class="callwrapper">
+                  <p class="call">Dial</p>
+                  <p><a href="{% url 'edit' phone.id %}" class="edit">Edit</a></p>
+                </div>  
+            {%endfor%}
+          </div>  
         <div class="app">
           <div></div>
           <div></div>

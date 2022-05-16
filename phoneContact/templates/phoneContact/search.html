@@ -20,21 +20,25 @@
               <div class="ss"></div>
             </a>
           </div>
-          {% for search in search %}
-            {% if search %}
-              <div class="con">
-                <p class="cn">{{search}} </p>
-                <p class="cn">PhoneNo: {{search.PhoneNo}}</p>
-                <p class="cn">Email: {{search.Email}}</p>
-                <p class="cn">Home: {{search.Address}}</p>
+          <div class="screen">
+            {% for search in search %}
+              {% if search %}
+                <div>
+                  <p class="cn">{{search}} </p>
+                  <p class="cn">PhoneNo: {{search.PhoneNo}}</p>
+                  <p class="cn">Email: {{search.Email}}</p>
+                  <p class="cn">Home: {{search.Address}}</p> 
+                  <hr>
               </div>  
-              <hr>
-             <p class="call">Dial</p>
-             <p><a href="{% url 'edit' search.id %}" class="edit">Edit</a></p>
-            {% else %}
-                <p>no contact</p>
-            {% endif %}    
-          {%endfor%}
+              <div class="callwrapper">
+                  <p class="call">Dial</p>
+                  <p><a href="{% url 'edit' search.id %}" class="edit">Edit</a></p>
+                </div>  
+              {% else %}
+                  <p>no contact</p>
+              {% endif %}    
+            {%endfor%}
+          </div>
           <div class="app">
             <div></div>
             <div></div>
